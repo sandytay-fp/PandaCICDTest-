@@ -34,4 +34,4 @@ jobs:
           cd hiddenFolder
           ls
           cd ..
-          ls
+          cat hiddenFolder
