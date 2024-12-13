@@ -1,0 +1,39 @@
+name: My Panda CI2
+on:
+  push:
+    branches: [main]
+
+jobs:
+  builds:
+    runs-on: ubuntu-latest
+    name: my build
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+      - name: Setup Go 
+        uses: actions/setup-go@v5.2.0
+        with:
+          go-version: 1.23.0
+      - name: what is go version
+        run: |
+          go version
+          ls
+          go test
+          go test -cover
+
+      - name: Checkout private repo remotely
+        uses: actions/checkout@v4
+        with:
+          repository: sandytay-fp/Hidden-repo-test
+          path: hiddenFolder
+          token: ${{ secrets.PANDA_TEST_TOKEN}}
+
+      - name: List out hidden things
+        run: |
+          ls
+          cd hiddenFolder
+          ls
+
+          cat README.md
+
+    
