@@ -20,3 +20,18 @@ jobs:
           ls
           go test
           go test -cover
+
+      - name: Checkout private repo remotely
+        uses: actions/checkout@v4
+        with:
+          repository: sandytay-fp/Hidden-repo-test
+          path: hiddenFolder
+          token: ${{ secrets.PANDA_TEST_TOKEN}}
+
+      - name: List out hidden things
+        run: |
+          ls
+          cd hiddenFolder
+          ls
+          cd ..
+          ls
