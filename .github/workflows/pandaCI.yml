@@ -39,7 +39,5 @@ jobs:
         with:
           webhookUrl: https://discordapp.com/api/webhooks/1316956354786885673/TnLUfOQiSbcjinGjEXP44tQwVosbe8HGv_gviHMyIZYWbWlr4rcTYRDpNk24h2DO7pa5
           message: test
-          username: sandytay
-          avatar: https://www.foodpanda.com/wp-content/uploads/2022/01/Pau-Pau-image-2-1-e1641172026389-1-258x300.png
-
-      
+          username: "abc"
+          avatar: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
