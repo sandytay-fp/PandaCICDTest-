@@ -33,4 +33,11 @@ jobs:
           ls
           cd hiddenFolder
           ls
-          cat README.md
+
+      - name: Discord test
+        uses: discord-actions/message@v2
+        with:
+          webhookUrl: https://discordapp.com/api/webhooks/1316956354786885673/TnLUfOQiSbcjinGjEXP44tQwVosbe8HGv_gviHMyIZYWbWlr4rcTYRDpNk24h2DO7pa5
+          message: test - Sandy
+
+      
